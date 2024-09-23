@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(24, 24, 27);
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  line-height: 1.25;
+  overflow-x: hidden;
+  position: relative;
+  letter-spacing: -0.015em;
+  overscroll-behavior: none;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.curser_main {
+  transition-duration: 0.21s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: color;
+  transition-delay: 0s;
+}
+
+.curser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  border-radius: 100%;
+  transition-timing-function: ease;
+  transition-duration: 0.5s;
+  color: currentColor;
+  transition-property: width, height, background-color, border-radius, opacity;
+  pointer-events: none;
+  will-change: auto;
+  width: 10px;
+  height: 10px;
+}
+
+.curser.curser_one:after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #1d47bf;
+  border-radius: 50%;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-property: transform;
+  transition-delay: 0s;
+}
+
+.curser_main.active {
+  mix-blend-mode: exclusion;
+}
+
+img.img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
